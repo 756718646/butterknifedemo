@@ -1,0 +1,26 @@
+package com.yongzheng.butterknifedemo;
+import android.view.View;
+import android.widget.TextView;
+import com.example.Unbinder;
+
+/**
+ * 最终生成的代码
+ * Created by yongzheng on 17-8-5.
+ */
+public class TestBaseActivity_ViewBinding implements Unbinder {
+
+    private TestBaseActivity target;
+
+    public TestBaseActivity_ViewBinding(TestBaseActivity target, View source) {
+        this.target = target;
+        target.text = (TextView) source.findViewById(R.id.text);
+    }
+
+    @Override
+    public void unbind() {
+        TestBaseActivity target = this.target;
+        if (target == null) throw new IllegalStateException("Bindings already cleared.");
+        this.target = null;
+        target.text = null;
+    }
+}

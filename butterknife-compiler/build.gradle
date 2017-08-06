@@ -1,0 +1,17 @@
+import javax.tools.JavaCompiler
+
+apply plugin: 'java'
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(path: ':butterknife-annotations')
+    //谷歌的一个库
+    compile 'com.google.auto.service:auto-service:1.0-rc3'
+}
+
+//tasks.withType(JavaCompile){
+//    options.encoding = "UTF-8"
+//}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
